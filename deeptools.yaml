@@ -1,0 +1,36 @@
+#comments taken from John's scqtl environment file
+# Conda configuration file to reproduce computing environment
+#
+# Create the conda environment:
+#
+# conda env create --file environment.yaml
+#
+# Update the conda environment:
+#
+# conda env update --file environment.yaml
+#
+# Activate the conda environment:
+#
+# source activate three-prime-env
+#
+# Deactivate the conda environment:
+#
+# source deactivate three-prime-env
+#
+#Load the R packages piecewise with conda env update
+
+
+name:
+    deeptools
+channels:
+    - bioconda #libjpeg 8?
+    - conda-forge
+
+dependencies:
+    - snakemake
+    - deeptools #bioconda
+    - r-base
+    - r-tidyverse
+    - r-optparse
+    - r-data.table
+    - pandas

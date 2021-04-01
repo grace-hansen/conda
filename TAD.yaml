@@ -1,0 +1,41 @@
+#comments taken from John's scqtl environment file
+# Conda configuration file to reproduce computing environment
+#
+# Create the conda environment:
+#
+# conda env create --file environment.yaml
+#
+# Update the conda environment:
+#
+# conda env update --file environment.yaml
+#
+# Activate the conda environment:
+#
+# source activate three-prime-env
+#
+# Deactivate the conda environment:
+#
+# source deactivate three-prime-env
+#
+#Load the R packages piecewise with conda env update
+
+
+name:
+    TAD
+
+channels:
+    - bioconda #libjpeg 8?
+    #- conda-forge
+
+dependencies:
+    - snakemake
+    - deeptools
+    - r-base
+    - r-tidyverse
+    - r-optparse
+    - r-data.table
+    - bedtools
+    ###- samtools #CANNOT be loaded directly in yaml, gives libcrypto errors. Instead:
+    #conda install -c conda-forge ncurses=6.1=he6710b0_1
+    #conda install -c conda-forge openssl=1.0.2p=h14c3975_1002
+    #conda install -c bioconda samtools=1.9 --force-reinstall

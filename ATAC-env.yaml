@@ -1,0 +1,36 @@
+#comments taken from John's scqtl environment file
+# Conda configuration file to reproduce computing environment
+#
+# Create the conda environment:
+#
+# conda env create --file environment.yaml
+#
+# Update the conda environment:
+#
+# conda env update --file environment.yaml
+#
+# Activate the conda environment:
+#
+# source activate three-prime-env
+#
+# Deactivate the conda environment:
+#
+# source deactivate three-prime-env
+#
+#Load the R packages piecewise with conda env update
+
+
+name:
+    ATAC-env
+channels:
+    - bioconda
+
+dependencies:
+    - cutadapt
+    - star=2.6.1b
+    - picard
+    - bedtools
+    - macs2
+    - tabix
+    - ucsc-beditemoverlapcount
+    - ucsc-bedgraphtobigwig 

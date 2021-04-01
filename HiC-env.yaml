@@ -1,0 +1,42 @@
+#comments taken from John's scqtl environment file
+# Conda configuration file to reproduce computing environment
+#
+# Create the conda environment:
+#
+# conda env create --file environment.yaml
+#
+# Update the conda environment:
+#
+# conda env update --file environment.yaml
+#
+# Activate the conda environment:
+#
+# source activate three-prime-env
+#
+# Deactivate the conda environment:
+#
+# source deactivate three-prime-env
+#
+# Resources:
+
+
+name:
+    HiC-env
+channels:
+    - anaconda
+    - bioconda
+    - conda-forge
+    - defaults
+    - r
+
+dependencies:
+    - perl
+    - python
+    - snakemake
+    - samtools=1.8
+    - bowtie2=2.3.5
+    - bedtools=2.27.0
+    - r-base
+    - r-tidyr
+    - ncurses # from conda-forge, needed for samtools to work
+    #- bioconductor-chicago
